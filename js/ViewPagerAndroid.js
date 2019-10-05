@@ -25,8 +25,6 @@ const {Platform, UIManager} = ReactNative;
 
 const dismissKeyboard = require('react-native/Libraries/Utilities/dismissKeyboard');
 
-import {childrenWithOverriddenStyle} from "./utils";
-
 const NativeAndroidViewPager = require('./AndroidViewPagerNativeComponent');
 
 const VIEW_PAGER_REF = 'viewPager';
@@ -156,7 +154,6 @@ class ViewPagerAndroid extends React.Component<ViewPagerProps> {
         onPageScroll={this._onPageScroll}
         onPageScrollStateChanged={this._onPageScrollStateChanged}
         onPageSelected={this._onPageSelected}
-        children={childrenWithOverriddenStyle(this.props.children)}
       />
     );
   }
